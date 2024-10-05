@@ -122,7 +122,7 @@ app.post('/districts/', authenticateToken, async (request, response) => {
     ${cases},
     ${cured},
     ${active},
-    ${deaths});`;
+    ${deaths});`
   const db = await db.run(addDistQuery)
   response.send('District Successfully Added')
 })
