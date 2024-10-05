@@ -1,0 +1,58 @@
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "christopher_phillips",
+    "password": "christy@123"
+}
+
+//get all states//
+GET http://localhost:3000/states/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzI4MTI0MjUwfQ.VsjIEwrQNgIpJ_Kb8e_it0aPKFcVXWFRShT9Cj29iro
+
+//get state based on stateId// 
+GET http://localhost:3000/states/8/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzI4MTI0MjUwfQ.VsjIEwrQNgIpJ_Kb8e_it0aPKFcVXWFRShT9Cj29iro
+
+//add district //
+POST http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzI4MTI0MjUwfQ.VsjIEwrQNgIpJ_Kb8e_it0aPKFcVXWFRShT9Cj29iro
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+// get district based on district id //
+GET http://localhost:3000/districts/322/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzI4MTI0MjUwfQ.VsjIEwrQNgIpJ_Kb8e_it0aPKFcVXWFRShT9Cj29iro
+
+
+// delete district based on district ID // 
+DELETE http://localhost:3000/districts/764/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzI4MTI0MjUwfQ.VsjIEwrQNgIpJ_Kb8e_it0aPKFcVXWFRShT9Cj29iro
+
+
+//update district details //
+PUT http://localhost:3000/districts/763/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzI4MTI0MjUwfQ.VsjIEwrQNgIpJ_Kb8e_it0aPKFcVXWFRShT9Cj29iro
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+
+// state statistics // 
+GET http://localhost:3000/states/29/stats/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzI4MTI0MjUwfQ.VsjIEwrQNgIpJ_Kb8e_it0aPKFcVXWFRShT9Cj29iro
